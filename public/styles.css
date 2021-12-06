@@ -3,11 +3,87 @@
  */
 body {
 	margin: 0;
+	font-family: Roboto;
+	/* background-color: beige;
+	color: black; */
 }
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
 
+h1 {
+	color: white;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+h2 {
+	color: white;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400;
+}
+
+@media (min-width: 992px) {
+	body {
+		font-size: 1.5em;
+		margin: 1.5em;
+		padding: 1.5em;
+	}
+}
+
+/*Hero
+<img src="images/website-hero-mobile.png" alt="A tidy desk with 
+<img src="images/website-hero-desktop.png" alt="A tidy desk with
+*/
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	background-image: url("images/website-hero-mobile.png");
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	top: 0px;
+	justify-content: flex-end;
+	padding-left: 10vw;
+}
+.hero h1 {
+	display: flex;
+	justify-items: flex-end;
+}
+
+@media (orientation: landscape) {
+	.hero {
+		display: flex;
+		background-image: url("images/website-hero-desktop.png");
+	}
+}
+
+/*Burger menu*/
+
+.main-nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 300%;
+	background: orange;
+}
+
+.main-nav-link {
+	display: block;
+	padding: 10px;
+	color: currentColor;
+	text-decoration: none;
+}
+
+.main-nav-link:hover {
+	background: black;
+	color: white;
+}
